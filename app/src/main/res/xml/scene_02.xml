@@ -4,7 +4,7 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@+id/start"
-        motion:duration="200">
+        motion:duration="100">
         <OnClick
             motion:dragDirection="dragDown"
             motion:touchAnchorId="@id/container"

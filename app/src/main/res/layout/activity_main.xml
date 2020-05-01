@@ -12,7 +12,7 @@
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="32dp"
-            android:background="#ffffff"
+            android:background="@drawable/bg_white_border"
             android:elevation="8dp">
 
             <ImageView
