@@ -12,6 +12,7 @@ import com.androidbolts.topsheet.databinding.FragmentTopSheetBinding
 
 class TopSheetFragment : Fragment() {
     private lateinit var binding: FragmentTopSheetBinding
+    private var listener: ButtonClickCompleteListener? = null
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -22,7 +23,16 @@ class TopSheetFragment : Fragment() {
             val toast = Toast.makeText(requireContext(), "Click Click", Toast.LENGTH_SHORT)
             toast.setGravity(Gravity.CENTER, 0, 0)
             toast.show()
+            listener?.onButtonClicked()
         }
         return binding.root
+    }
+
+    fun setListener(listener: ButtonClickCompleteListener) {
+        this.listener = listener
+    }
+
+    interface ButtonClickCompleteListener {
+        fun onButtonClicked()
     }
 }
